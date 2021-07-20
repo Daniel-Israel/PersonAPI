@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -32,6 +33,9 @@ public class Person {
 
     @Column(nullable = false)
     private String lastName;
+
+    @Column(nullable = false)
+    private LocalTime age;
 
     @Column(nullable = false, unique = true)
     private String cpf;
